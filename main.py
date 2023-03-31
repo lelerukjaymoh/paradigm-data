@@ -1,5 +1,5 @@
-import pandas as pd
 import polars as pl
+import ctc
 import json
 
 data_path = "/home/jay/projects/personal/paradigm/data/ethereum_contracts__v1_0_0__00000000_to_00999999.parquet"
@@ -8,6 +8,8 @@ data_path = "/home/jay/projects/personal/paradigm/data/ethereum_contracts__v1_0_
 def save_to_json(contracts):
     with open('contracts.json', 'w') as f:
         json.dump(contracts, f)
+
+    print("Saved contracts to contracts.json")
 
 
 def getContracts():
